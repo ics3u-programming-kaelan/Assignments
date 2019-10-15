@@ -1,9 +1,10 @@
 ﻿/*
  * Created by: Kaelan K
- * Created on: Day-Month-Year
+ * Created on: 15-10-2019
  * Created for: ICS3U Programming
- * Assignment #3b - Name of Program
- * This program...
+ * Assignment #4b - Pizza Order
+ * This program takes a users input for size, toppings, sides, and amount of pizzas
+ * and calculates the subtotal, tax and total then tells you how long your pizza will be
 */
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,23 @@ namespace Assign4PizzaOrder
             // setting all of the vars
             double pizzaSize, toppings, sides, amountPizzas, pizzaTime, pizzaCost, toppingsCost, sidesCost, pizzaMultiplier, subtotal, tax, total;
 
+            // setting the constants
+            const double XtraLarge = 12.99;
+            const double Large = 9.99;
+            const double Medium = 8.59;
+            const double NoSide = 0;
+            const double Poutine = 4.99;
+            const double Wings = 7.99;
+            const double Fries = 3.99;
+            const double OneTop = 0.75;
+            const double TwoTop = 1.35;
+            const double ThreeTop = 2.15;
+            const double FourTop = 2.75;
+            const double FiveTop = 3;
+            const double OnePie = 1;
+            const double TwoPie = 2;
+            const double ThreePie = 3;
+
             pizzaCost = 0;
 
             sidesCost = 0;
@@ -70,71 +88,71 @@ namespace Assign4PizzaOrder
             if (pizzaSize == 3)
             {
                 pizzaTime = 40;
-                pizzaCost = 12.99;
+                pizzaCost = XtraLarge;
             }
             else if (pizzaSize == 2)
             {
                 pizzaTime = 35;
-                pizzaCost = 9.99;
+                pizzaCost = Large;
             }
             else if (pizzaSize == 1)
             {
                 pizzaTime = 30;
-                pizzaCost = 8.59;
+                pizzaCost = Medium;
             }
 
             // Setting the sides cost
             if (sides == 0)
             {
-                sidesCost = 0;
+                sidesCost = NoSide;
             }
             else if (sides == 1)
             {
-                sidesCost = 4.99;
+                sidesCost = Poutine;
             }
             else if (sides == 2)
             {
-                sidesCost = 7.99;
+                sidesCost = Wings;
             }
             else if (sides == 3)
             {
-                sidesCost = 3.99;
+                sidesCost = Fries;
             }
 
             // Setting the toppings cost
             if (toppings == 1)
             {
-                toppingsCost = 0.75;
+                toppingsCost = OneTop;
             }
             else if (toppings == 2)
             {
-                toppingsCost = 1.35;
+                toppingsCost = TwoTop;
             }
             else if (toppings == 3)
             {
-                toppingsCost = 2.15;
+                toppingsCost = ThreeTop;
             }
             else if (toppings == 4)
             {
-                toppingsCost = 2.75;
+                toppingsCost = FourTop;
             }
             else if (toppings == 5)
             {
-                toppingsCost = 3;
+                toppingsCost = FiveTop;
             }
 
             // Setting the amount of pizzas
             if (amountPizzas == 1)
             {
-                pizzaMultiplier = 1;
+                pizzaMultiplier = OnePie;
             }
             else if (amountPizzas == 2)
             {
-                pizzaMultiplier = 2;
+                pizzaMultiplier = TwoPie;
             }
             else if (amountPizzas == 3)
             {
-                pizzaMultiplier = 3;
+                pizzaMultiplier = ThreePie;
             }
 
             // Calculating subtotal
