@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPizzaOrder));
             this.lblPizzaSize = new System.Windows.Forms.Label();
             this.nupPizzaSize = new System.Windows.Forms.NumericUpDown();
             this.lblMedium = new System.Windows.Forms.Label();
@@ -52,10 +53,13 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblTotalAns = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.lblPizzaTime = new System.Windows.Forms.Label();
+            this.picPizza = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupPizzaSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupToppings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSides)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAmountOfPizzas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPizza)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPizzaSize
@@ -330,19 +334,42 @@
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Location = new System.Drawing.Point(640, 95);
+            this.btnOrder.Location = new System.Drawing.Point(619, 449);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(171, 355);
+            this.btnOrder.Size = new System.Drawing.Size(171, 178);
             this.btnOrder.TabIndex = 23;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
             // 
+            // lblPizzaTime
+            // 
+            this.lblPizzaTime.AutoSize = true;
+            this.lblPizzaTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPizzaTime.Location = new System.Drawing.Point(255, 552);
+            this.lblPizzaTime.Name = "lblPizzaTime";
+            this.lblPizzaTime.Size = new System.Drawing.Size(36, 20);
+            this.lblPizzaTime.TabIndex = 24;
+            this.lblPizzaTime.Text = "???";
+            // 
+            // picPizza
+            // 
+            this.picPizza.Image = ((System.Drawing.Image)(resources.GetObject("picPizza.Image")));
+            this.picPizza.Location = new System.Drawing.Point(585, 113);
+            this.picPizza.Name = "picPizza";
+            this.picPizza.Size = new System.Drawing.Size(247, 234);
+            this.picPizza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPizza.TabIndex = 25;
+            this.picPizza.TabStop = false;
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(864, 667);
+            this.Controls.Add(this.picPizza);
+            this.Controls.Add(this.lblPizzaTime);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.lblTotalAns);
             this.Controls.Add(this.lblTotal);
@@ -373,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupToppings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupSides)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAmountOfPizzas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPizza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,6 +432,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblTotalAns;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Label lblPizzaTime;
+        private System.Windows.Forms.PictureBox picPizza;
     }
 }
 
