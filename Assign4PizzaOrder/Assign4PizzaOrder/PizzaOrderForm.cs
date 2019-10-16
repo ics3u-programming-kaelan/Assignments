@@ -59,6 +59,7 @@ namespace Assign4PizzaOrder
             const double TwoPie = 2;
             const double ThreePie = 3;
 
+            // initializing the values
             pizzaCost = 0;
 
             sidesCost = 0;
@@ -171,6 +172,7 @@ namespace Assign4PizzaOrder
 
             lblTotalAns.Text = String.Format("${0:0.00}", total);
 
+            //  telling yo uhow long your pizza will be
             lblPizzaTime.Text = Convert.ToString("It will take " + pizzaTime + " minutes for your pizza to be ready");
 
         }
