@@ -12,6 +12,14 @@ namespace simplified21KaelanK
 {
     public partial class frmSimplified21 : Form
     {
+        // declaring constants and variables
+        const int MIN_NUM = 1;
+        const int MAX_NUM = 11;
+        int card1;
+        int card2;
+        int card3;
+        Random randomCardGenerator = new Random();   
+
         public frmSimplified21()
         {
             InitializeComponent();
@@ -38,9 +46,19 @@ namespace simplified21KaelanK
             this.lblDealerCard3.Show();
             this.btnHit.Show();
             this.btnStay.Show();
+
             // Hide other labels and button
             this.lblBlackjack.Hide();
             this.btnStart.Hide();
+
+            card1 = randomCardGenerator.Next(MIN_NUM, MAX_NUM + 1);
+            card2 = randomCardGenerator.Next(MIN_NUM, MAX_NUM + 1);
+            card3 = randomCardGenerator.Next(MIN_NUM, MAX_NUM + 1);
+
+            lblCard1.Text = Convert.ToString(card1);
+            lblCard2.Text = Convert.ToString(card2);
+            lblCard3.Text = Convert.ToString(card3);
+
         }
     }
 }
