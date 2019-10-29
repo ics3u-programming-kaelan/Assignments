@@ -1,0 +1,10 @@
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\bin\Debug\simplified21KaelanK.exe.config
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\bin\Debug\simplified21KaelanK.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\bin\Debug\simplified21KaelanK.pdb
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.csprojAssemblyReference.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.Properties.Resources.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.frmSimplified21.resources
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.csproj.GenerateResource.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.csproj.CoreCompileInputs.cache
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.exe
+N:\Classes\Sem1-Fall2019\ICS3U Programming\KKaelan (s254351)\Assignments\simplified21KaelanK\simplified21KaelanK\obj\Debug\simplified21KaelanK.pdb
