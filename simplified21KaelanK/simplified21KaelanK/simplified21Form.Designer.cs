@@ -46,6 +46,13 @@
             this.lblDealerTotal = new System.Windows.Forms.Label();
             this.lblUsersCards = new System.Windows.Forms.Label();
             this.lblUserTotal = new System.Windows.Forms.Label();
+            this.lblWin = new System.Windows.Forms.Label();
+            this.lblLose = new System.Windows.Forms.Label();
+            this.lblTie = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniReset = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBlackjack
@@ -78,6 +85,7 @@
             this.btnHit.TabIndex = 2;
             this.btnHit.Text = "Hit";
             this.btnHit.UseVisualStyleBackColor = true;
+            this.btnHit.Click += new System.EventHandler(this.BtnHit_Click);
             // 
             // btnStay
             // 
@@ -88,6 +96,7 @@
             this.btnStay.TabIndex = 3;
             this.btnStay.Text = "Stay";
             this.btnStay.UseVisualStyleBackColor = true;
+            this.btnStay.Click += new System.EventHandler(this.BtnStay_Click);
             // 
             // lblCard1
             // 
@@ -231,11 +240,69 @@
             this.lblUserTotal.TabIndex = 18;
             this.lblUserTotal.Text = "???";
             // 
+            // lblWin
+            // 
+            this.lblWin.AutoSize = true;
+            this.lblWin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWin.Location = new System.Drawing.Point(231, 170);
+            this.lblWin.Name = "lblWin";
+            this.lblWin.Size = new System.Drawing.Size(190, 42);
+            this.lblWin.TabIndex = 19;
+            this.lblWin.Text = "YOU WIN!";
+            // 
+            // lblLose
+            // 
+            this.lblLose.AutoSize = true;
+            this.lblLose.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLose.Location = new System.Drawing.Point(213, 170);
+            this.lblLose.Name = "lblLose";
+            this.lblLose.Size = new System.Drawing.Size(219, 42);
+            this.lblLose.TabIndex = 20;
+            this.lblLose.Text = "YOU LOSE!";
+            // 
+            // lblTie
+            // 
+            this.lblTie.AutoSize = true;
+            this.lblTie.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTie.Location = new System.Drawing.Point(218, 170);
+            this.lblTie.Name = "lblTie";
+            this.lblTie.Size = new System.Drawing.Size(203, 42);
+            this.lblTie.TabIndex = 21;
+            this.lblTie.Text = "YOU TIED!";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mniExit,
+            this.mniReset});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(671, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mniExit
+            // 
+            this.mniExit.Name = "mniExit";
+            this.mniExit.Size = new System.Drawing.Size(38, 20);
+            this.mniExit.Text = "Exit";
+            this.mniExit.Click += new System.EventHandler(this.MniExit_Click);
+            // 
+            // mniReset
+            // 
+            this.mniReset.Name = "mniReset";
+            this.mniReset.Size = new System.Drawing.Size(47, 20);
+            this.mniReset.Text = "Reset";
+            this.mniReset.Click += new System.EventHandler(this.MniReset_Click);
+            // 
             // frmSimplified21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 450);
+            this.Controls.Add(this.lblTie);
+            this.Controls.Add(this.lblLose);
+            this.Controls.Add(this.lblWin);
             this.Controls.Add(this.lblUserTotal);
             this.Controls.Add(this.lblUsersCards);
             this.Controls.Add(this.lblDealerTotal);
@@ -254,8 +321,12 @@
             this.Controls.Add(this.btnHit);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblBlackjack);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmSimplified21";
             this.Text = "Simplified 21 by Kaelan K";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,6 +352,12 @@
         private System.Windows.Forms.Label lblDealerTotal;
         private System.Windows.Forms.Label lblUsersCards;
         private System.Windows.Forms.Label lblUserTotal;
+        private System.Windows.Forms.Label lblWin;
+        private System.Windows.Forms.Label lblLose;
+        private System.Windows.Forms.Label lblTie;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mniExit;
+        private System.Windows.Forms.ToolStripMenuItem mniReset;
     }
 }
 
