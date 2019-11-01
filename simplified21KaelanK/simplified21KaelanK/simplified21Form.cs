@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Kaelan K
+ * Created on: 1-11-2019
+ * Created for: ICS3U Programming
+ * Assignment #5b - Blackjack
+ * This program is a simplifed version of blackjack.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +31,7 @@ namespace simplified21KaelanK
         int dealerCard2;
         int dealerCard3;
         
+        // generate random number
         Random randomCardGenerator = new Random();   
 
         public frmSimplified21()
@@ -51,15 +59,19 @@ namespace simplified21KaelanK
             this.lblLose.Hide();
             this.lblTie.Hide();
             
+            // if dealer gets blackjack
             if (dealerTotal == 21)
             {
+                // show you lose label, disable buttons
                 this.lblLose.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+            // if user gets blackjack
             if (userTotal == 21)
             {
-                this.lblLose.Show();
+                // show you win button and disable buttons
+                this.lblWin.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
@@ -73,6 +85,7 @@ namespace simplified21KaelanK
             this.lblCard2.Show();
             this.lblDealerCard1.Show();
             this.lblDealerCard2.Show();
+            this.lblDealerCard3.Show();
             this.btnHit.Show();
             this.btnStay.Show();
             this.lblDealersCards.Show();
@@ -98,33 +111,38 @@ namespace simplified21KaelanK
             lblCard1.Text = Convert.ToString(card1);
             lblCard2.Text = Convert.ToString(card2);
             lblCard3.Text = Convert.ToString(card3);
-            lblDealerCard1.Text = Convert.ToString(dealerCard1);
-            lblDealerCard2.Text = Convert.ToString(dealerCard2);
-            lblDealerCard3.Text = Convert.ToString(dealerCard3);
 
+            // if card1 is 1 then
             if (card1 == 1)
             {
+                // show labels to give option on what card to choose
                 this.lblAce.Show();
                 this.lblOr.Show();
                 this.btnAce.Show();
                 this.btnOne.Show();
             } 
+            // if card2 is 1 then
             else if (card2 == 1)
             {
+                // show labels to give option on what card to choose
                 this.lblAce.Show();
                 this.lblOr.Show();
                 this.btnAce.Show();
                 this.btnOne.Show();
             }
+            // if card1 is 11 then
             else if (card1 == 11)
             {
+                // show labels to give option on what card to choose
                 this.lblAce.Show();
                 this.lblOr.Show();
                 this.btnAce.Show();
                 this.btnOne.Show();
             }
+            // if card 2 is 11 then
             else if (card2 == 11)
             {
+                // show labels to give option on what card to choose
                 this.lblAce.Show();
                 this.lblOr.Show();
                 this.btnAce.Show();
@@ -136,15 +154,16 @@ namespace simplified21KaelanK
             dealerTotal = dealerCard1 + dealerCard2;
 
             // display total
-            this.lblDealerTotal.Text = Convert.ToString(dealerTotal);
             this.lblUserTotal.Text = Convert.ToString(userTotal);
 
         }
 
         private void BtnAce_Click(object sender, EventArgs e)
         {
+            // if the card is 1 then
             if (card1 == 1)
             {
+                // change card value to 11, update value, and hide labels
                 card1 = 11;
                 userTotal = card1 + card2;
                 this.lblCard1.Text = "11";
@@ -155,8 +174,10 @@ namespace simplified21KaelanK
                 this.btnOne.Hide();
                 this.Refresh();
             }
+            // if card 3 is 1 then
             else if (card2 == 1)
             {
+                // change card value to 11, update value, and hide labels
                 card2 = 11;
                 userTotal = card1 + card2;
                 this.lblCard2.Text = "11";
@@ -167,8 +188,10 @@ namespace simplified21KaelanK
                 this.btnOne.Hide();
                 this.Refresh();
             }
+            // if card3 is 1 then
             else if (card3 == 1)
             {
+                // change card value to 11, update value, and hide labels
                 card3 = 11;
                 userTotal = card1 + card2;
                 this.lblCard3.Text = "11";
@@ -179,12 +202,57 @@ namespace simplified21KaelanK
                 this.btnOne.Hide();
                 this.Refresh();
             }
+            // if card1 is 11 then
+            else if (card1 == 11)
+            {
+                // change card value
+                card1 = 11;
+                userTotal = card1 + card2;
+                this.lblCard1.Text = "11";
+                this.lblUserTotal.Text = Convert.ToString(userTotal);
+                this.lblAce.Hide();
+                this.lblOr.Hide();
+                this.btnAce.Hide();
+                this.btnOne.Hide();
+                this.Refresh();
+            }
+            // if card2 is 11 then
+            else if (card2 == 11)
+            {
+                // change card value
+                card2 = 11;
+                userTotal = card1 + card2;
+                this.lblCard2.Text = "11";
+                this.lblUserTotal.Text = Convert.ToString(userTotal);
+                this.lblAce.Hide();
+                this.lblOr.Hide();
+                this.btnAce.Hide();
+                this.btnOne.Hide();
+                this.Refresh();
+            }
+            // if card3 is 11 then
+            else if (card3 == 11)
+            {
+                // change card value
+                card3 = 11;
+                userTotal = card1 + card2;
+                this.lblCard3.Text = "11";
+                this.lblUserTotal.Text = Convert.ToString(userTotal);
+                this.lblAce.Hide();
+                this.lblOr.Hide();
+                this.btnAce.Hide();
+                this.btnOne.Hide();
+                this.Refresh();
+            }
+
         }
 
         private void BtnOne_Click(object sender, EventArgs e)
         {
+            // if card1 is 11 then
             if (card1 == 11)
             {
+                // change card value
                 card1 = 1;
                 userTotal = card1 + card2;
                 this.lblCard1.Text = "1";
@@ -195,8 +263,10 @@ namespace simplified21KaelanK
                 this.btnOne.Hide();
                 this.Refresh();
             }
+            // if card1 is 11 then
             else if (card2 == 11)
             {
+                // change card value
                 card2 = 1;
                 userTotal = card1 + card2;
                 this.lblCard2.Text = "1";
@@ -207,8 +277,10 @@ namespace simplified21KaelanK
                 this.btnOne.Hide();
                 this.Refresh();
             }
+            // if card1 is 11 then
             else if (card3 == 11)
             {
+                // change card value
                 card3 = 1;
                 userTotal = card1 + card2;
                 this.lblCard3.Text = "1";
@@ -219,74 +291,150 @@ namespace simplified21KaelanK
                 this.btnOne.Hide();
                 this.Refresh();
             }
-        }
-
-        private void BtnHit_Click(object sender, EventArgs e)
-        {
-            if (card3 == 11)
+            // if the card is 1 then
+            if (card1 == 1)
             {
-                this.lblAce.Show();
-                this.lblOr.Show();
-                this.btnAce.Show();
-                this.btnOne.Show();
+                // change card value to 11, update value, and hide labels
+                card1 = 1;
+                userTotal = card1 + card2;
+                this.lblCard1.Text = "1";
+                this.lblUserTotal.Text = Convert.ToString(userTotal);
+                this.lblAce.Hide();
+                this.lblOr.Hide();
+                this.btnAce.Hide();
+                this.btnOne.Hide();
+                this.Refresh();
             }
+            // if card 3 is 1 then
+            else if (card2 == 1)
+            {
+                // change card value to 11, update value, and hide labels
+                card2 = 1;
+                userTotal = card1 + card2;
+                this.lblCard2.Text = "1";
+                this.lblUserTotal.Text = Convert.ToString(userTotal);
+                this.lblAce.Hide();
+                this.lblOr.Hide();
+                this.btnAce.Hide();
+                this.btnOne.Hide();
+                this.Refresh();
+            }
+            // if card3 is 1 then
             else if (card3 == 1)
             {
-                this.lblAce.Show();
-                this.lblOr.Show();
-                this.btnAce.Show();
-                this.btnOne.Show();
+                // change card value to 11, update value, and hide labels
+                card3 = 1;
+                userTotal = card1 + card2;
+                this.lblCard3.Text = "1";
+                this.lblUserTotal.Text = Convert.ToString(userTotal);
+                this.lblAce.Hide();
+                this.lblOr.Hide();
+                this.btnAce.Hide();
+                this.btnOne.Hide();
+                this.Refresh();
             }
-            this.lblCard3.Show();
-            this.lblDealerCard3.Show();
-            dealerTotal = dealerTotal + dealerCard3;
-            userTotal = userTotal + card3;
-            this.lblDealerTotal.Text = Convert.ToString(dealerTotal);
-            this.lblUserTotal.Text = Convert.ToString(userTotal);
-            this.Refresh();
-            if (userTotal == dealerTotal)
+            // if users total is 21 then
+            if (userTotal == 21)
             {
-                this.lblTie.Show();
-                this.btnHit.Enabled = false;
-                this.btnStay.Enabled = false;
-            }
-            else if (userTotal == 21)
-            {
+                // disable win label and disable buttons
                 this.lblWin.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+          
+        }
+
+        private void BtnHit_Click(object sender, EventArgs e)
+        {
+            // if card3 is 11 then
+            if (card3 == 11)
+            {
+                // show choice labels
+                this.lblAce.Show();
+                this.lblOr.Show();
+                this.btnAce.Show();
+                this.btnOne.Show();
+            }
+            // if card 2 is 1 then
+            else if (card3 == 1)
+            {
+                // show chioce labels
+                this.lblAce.Show();
+                this.lblOr.Show();
+                this.btnAce.Show();
+                this.btnOne.Show();
+            }
+            
+            // show hit card, update total, display cards
+            this.lblCard3.Show();
+            dealerTotal = dealerTotal + dealerCard3;
+            userTotal = userTotal + card3;
+            lblDealerCard1.Text = Convert.ToString(dealerCard1);
+            lblDealerCard2.Text = Convert.ToString(dealerCard2);
+            lblDealerCard3.Text = Convert.ToString(dealerCard3);
+            this.lblDealerTotal.Text = Convert.ToString(dealerTotal);
+            this.lblUserTotal.Text = Convert.ToString(userTotal);
+            this.Refresh();
+            // if user total is dealertotal then 
+            if (userTotal == dealerTotal)
+            {
+                // show tie label and disable buttons
+                this.lblTie.Show();
+                this.btnHit.Enabled = false;
+                this.btnStay.Enabled = false;
+            }
+            // if user total is 21 then
+            else if (userTotal == 21)
+            {
+                // show lose label and disable buttons
+
+                this.lblWin.Show();
+                this.btnHit.Enabled = false;
+                this.btnStay.Enabled = false;
+            }
+            // if usertotal greater then 21
             else if (userTotal > 21)
             {
+                // show lose label and disable buttons
                 this.lblLose.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+            // if user total greater then dealer total then
             else if (userTotal > dealerTotal)
             {
+                // user total less then 21 then
                 if (userTotal < 21)
                 {
+                    // show win label and disable buttons
                     this.lblWin.Show();
                     this.btnHit.Enabled = false;
                     this.btnStay.Enabled = false;
                 }
             }
+            // if dealer total is 21 then
             else if (dealerTotal == 21)
             {
+                // show lose label and disable buttons
                 this.lblLose.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+            // if dealer total greater then 21
             else if (dealerTotal > 21)
             {
+                // show win label and disable buttons
                 this.lblWin.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+            // if dealer total greater then user total then
             else if (dealerTotal > userTotal)
             {
+                // is dealer total less then 21 then
                 if (dealerTotal < 21)
                 {
+                    // show lose label and disable buttons
                     this.lblLose.Show();
                     this.btnHit.Enabled = false;
                     this.btnStay.Enabled = false;
@@ -296,35 +444,66 @@ namespace simplified21KaelanK
 
         private void BtnStay_Click(object sender, EventArgs e)
         {
+            // disable button and display cpu numbers
             this.btnHit.Enabled = false;
             dealerTotal = dealerTotal + dealerCard3;
+            lblDealerCard1.Text = Convert.ToString(dealerCard1);
+            lblDealerCard2.Text = Convert.ToString(dealerCard2);
+            lblDealerCard3.Text = Convert.ToString(dealerCard3);
             this.lblDealerTotal.Text = Convert.ToString(dealerTotal);
             this.lblDealerCard3.Show();
-            if (userTotal > 21)
+
+            // if user value is cpu value then
+            if (userTotal == dealerTotal)
             {
+                // display tie label and hide labels
+                this.lblTie.Show();
+                this.btnHit.Enabled = false;
+                this.btnStay.Enabled = false;
+            }
+            // if user total greater then 21
+            else if (userTotal > 21)
+            {
+                // show lose label and disable buttons
                 this.lblLose.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+            // if user total greater then dealer total
             else if (userTotal > dealerTotal)
             {
+                // is user total less then 21
                 if (userTotal < 21)
                 {
+                    // shoe win label and disable buttons
                     this.lblWin.Show();
                     this.btnHit.Enabled = false;
                     this.btnStay.Enabled = false;
                 }
             }
+            // if dealer total is 21
+            else if (dealerTotal == 21)
+            {
+                // show lose label and disable buttons
+                this.lblLose.Show();
+                this.btnHit.Enabled = false;
+                this.btnStay.Enabled = false;
+            }
+            // if dealer total greater then 21 then
             else if (dealerTotal > 21)
             {
+                // display win label and disable  buttons
                 this.lblWin.Show();
                 this.btnHit.Enabled = false;
                 this.btnStay.Enabled = false;
             }
+            // if dealer total is greater then user total then
             else if (dealerTotal > userTotal)
             {
+                // if dealer total is less then 21 then
                 if (dealerTotal < 21)
                 {
+                    // show lose label and disable buttons
                     this.lblLose.Show();
                     this.btnHit.Enabled = false;
                     this.btnStay.Enabled = false;
