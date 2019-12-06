@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{C7F72342-47C7-4D0F-8F2A-D5A774F169BE}|Default">
+  <MonoDevelop.Ide.ItemProperties.simplified21BetterKaelanK PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="simplified21BetterKaelanK/simplified21BetterKaelanKForm.cs">
+    <Files>
+      <File FileName="simplified21BetterKaelanK/simplified21BetterKaelanKForm.Designer.cs" Line="1" Column="1" />
+      <File FileName="simplified21BetterKaelanK/simplified21BetterKaelanKForm.resx" />
+      <File FileName="simplified21BetterKaelanK/simplified21BetterKaelanKForm.cs" Line="576" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
